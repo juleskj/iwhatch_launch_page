@@ -3,14 +3,14 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #b7cedb;
+  --foreground: white;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
-    --foreground: #ededed;
+    --foreground: #b7cedb;
   }
 }
 
@@ -18,4 +18,10 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+button {
+  padding: 10px 30px;
+  background-color: none;
+  outline: rgb(250, 255, 250) 2px solid;
 }
