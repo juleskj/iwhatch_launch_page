@@ -1,6 +1,8 @@
 const ButtonCTA = (props) => {
   return (
-    <button className="capitalize rounded-full text-white">{props.text}</button>
+    <button className="capitalize rounded-full text-white hover:bg-white">
+      {props.text}
+    </button>
   );
 };
 
