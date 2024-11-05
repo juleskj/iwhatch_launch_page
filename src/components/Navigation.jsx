@@ -13,17 +13,17 @@ const Navigation = () => {
 
   return (
     <header>
-      <nav>
+      <nav className="py-10">
         <ul className="flex flex-row justify-around items-center gap-1 ">
           <li className="logo">
             <a href="#">
-              <FaApple className="apple_icom" />
+              <FaApple className="text-5xl" />
             </a>
           </li>
           <section className="inline-flex">
             <li>
               <a
-                className="font-md py-2 px-4 m-1 rounded-full hover:bg-white hover:text-[#b7cedb]"
+                className="text-2xl py-2 px-4 m-1 rounded-full hover:bg-white hover:text-[#b7cedb]"
                 href="#"
               >
                 Mac
@@ -31,7 +31,7 @@ const Navigation = () => {
             </li>
             <li>
               <a
-                className="font-md py-2 px-4 m-1 rounded-full hover:bg-white hover:text-[#b7cedb]"
+                className="text-2xl py-2 px-4 m-1 rounded-full hover:bg-white hover:text-[#b7cedb]"
                 href="#"
               >
                 iPhone
@@ -39,7 +39,7 @@ const Navigation = () => {
             </li>
             <li>
               <a
-                className="font-md py-2 px-4 m-1 rounded-full hover:bg-white hover:text-[#b7cedb]"
+                className="text-2xl py-2 px-4 m-1 rounded-full hover:bg-white hover:text-[#b7cedb]"
                 href="#"
               >
                 iWatch
@@ -47,7 +47,7 @@ const Navigation = () => {
             </li>
             <li>
               <a
-                className="font-md py-2 px-4 m-1 rounded-full hover:bg-white hover:text-[#b7cedb]"
+                className="text-2xl py-2 px-4 m-1 rounded-full hover:bg-white hover:text-[#b7cedb]"
                 href="#"
               >
                 Support
@@ -57,12 +57,12 @@ const Navigation = () => {
           <div className="inline-flex">
             <li>
               <a href="#" className="px-3 border-r-2">
-                <CiSearch />
+                <CiSearch className="text-2xl" />
               </a>
             </li>
             <li>
               <a className="px-3" href="#">
-                <CiShoppingBasket />
+                <CiShoppingBasket className="text-2xl" />
               </a>
             </li>
           </div>
