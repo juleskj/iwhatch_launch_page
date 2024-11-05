@@ -20,17 +20,6 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-button {
-  padding: 10px 30px;
-  background-color: none;
-  outline: rgb(250, 255, 250) 2px solid;
-  width: fit-content;
-  &:hover {
-    color: var(--background);
-    background-color: var(--foreground);
-  }
-}
-
 .iwatch_header {
   display: flex;
   flex-flow: column;
@@ -77,19 +66,15 @@ button {
 }
 
 ul {
-  display: flex;
+  /* display: flex;
   flex-flow: row;
   justify-content: space-around;
   align-items: center;
   gap: 1rem;
-  font-size: 20px;
+  font-size: 20px; */
 
   & li {
     display: grid;
     place-content: center;
-  }
-
-  & section li a:hover {
-    color: var(--background);
   }
 }
