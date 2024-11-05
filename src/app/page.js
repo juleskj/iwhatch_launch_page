@@ -8,18 +8,9 @@ import { FaLongArrowAltRight } from "react-icons/fa";
 
 export default function Home() {
   function setColorDot() {
-    const element = document.querySelector("[data-color]");
-
-    if (element) {
-      const color = element.getAttribute("data-color");
-      if (color === "navy") {
-        console.log("🚀 ~ setColorOcean11 ~ color:", color);
-      } else if (color === "mint") {
-        console.log("🚀 ~ setColorOcean11 ~ mint:", mint);
-      } else {
-        console.log("ocean");
-      }
-    }
+    const elements = document.querySelector("[data-color]");
+    let color = elements.getAttribute("data-color");
+    console.log(color);
   }
 
   function setColorNavy() {
