@@ -3,46 +3,12 @@ import { useState } from "react";
 import Image from "next/image";
 import ButtonCTA from "@/components/ButtonCTA";
 import Navigation from "@/components/Navigation";
-
+import Navy from "../../public/assets/navy.png";
+import Mint from "../../public/assets/mint.png";
+import Ocean from "../../public/assets/ocean.png";
 import ArrowPageChange from "@/components/ArrowPageChange";
 
 export default function Home() {
-  function setColorOcean11() {
-    document.querySelector(".place_holder").style.backgroundImage =
-      "url('../assets/ocean.png')";
-
-    const allDots = document.querySelectorAll("[data-dot]");
-
-    allDots.forEach((dot) => {
-      dot.style.outlineOffset = "";
-    });
-    document.querySelector("[data-dot='ocean']").style.outlineOffset = "4px";
-  }
-
-  function setColorNavy() {
-    document.querySelector(".place_holder").style.backgroundImage =
-      "url('../assets/navy.png')";
-
-    const allDots = document.querySelectorAll("[data-dot]");
-
-    allDots.forEach((dot) => {
-      dot.style.outlineOffset = "";
-    });
-    document.querySelector("[data-dot='navy']").style.outlineOffset = "4px";
-  }
-
-  function setColorMint() {
-    document.querySelector(".place_holder").style.backgroundImage =
-      "url('../assets/mint.png')";
-    const allDots = document.querySelectorAll("[data-dot]");
-
-    allDots.forEach((dot) => {
-      dot.style.outlineOffset = "";
-    });
-
-    document.querySelector("[data-dot='mint']").style.outlineOffset = "4px";
-  }
-
   return (
     <div className="min-h-full ">
       <div className="flex flex-row justify-around py-10 ">
@@ -58,7 +24,12 @@ export default function Home() {
 
         <section>
           <div className="flex flex-row items-center justify-around">
-            <div className="place_holder"></div>
+            <Image
+              src={Navy}
+              width={500}
+              height={500}
+              alt="Picture of the author"
+            />
             <div className="flex flex-col justify-around items-center">
               <span
                 data-dot="navy"
@@ -75,21 +46,30 @@ export default function Home() {
             </div>
           </div>
           <div className="flex flex-row justify-around items-center">
-            <button
-              onClick={setColorNavy}
-              className="bg-[#778090] p-2 m-1 cursor-pointer rounded-lg"
-              data-color="navy"
-            ></button>
-            <button
-              onClick={setColorMint}
-              className="bg-[#8EDCD6] p-2 m-1 cursor-pointer rounded-lg"
-              data-color="mint"
-            ></button>
-            <button
-              onClick={setColorOcean11}
-              className="bg-[#D9E7ED] p-2 m-1 cursor-pointer rounded-lg"
-              data-color="ocean"
-            ></button>
+            <div className="bg-[#778090] p-2 m-1 cursor-pointer rounded-lg">
+              <Image
+                src={Navy}
+                width={150}
+                height={150}
+                alt="Picture of the author"
+              />
+            </div>
+            <div className="bg-[#8EDCD6] p-2 m-1 cursor-pointer rounded-lg">
+              <Image
+                src={Mint}
+                width={150}
+                height={150}
+                alt="Picture of the author"
+              />
+            </div>
+            <div className="bg-[#D9E7ED] p-2 m-1 cursor-pointer rounded-lg">
+              <Image
+                src={Ocean}
+                width={150}
+                height={150}
+                alt="Picture of the author"
+              />
+            </div>
           </div>
         </section>
       </div>
