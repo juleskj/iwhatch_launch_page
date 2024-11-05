@@ -7,16 +7,19 @@ import { FaLongArrowAltLeft } from "react-icons/fa";
 import { FaLongArrowAltRight } from "react-icons/fa";
 
 export default function Home() {
-  function setColorOcean11() {
-    document.querySelector(".place_holder").style.backgroundImage =
-      "url('../assets/ocean.png')";
+  function setColorDot() {
+    const element = document.querySelector("[data-color]");
 
-    const allDots = document.querySelectorAll("[data-dot]");
-
-    allDots.forEach((dot) => {
-      dot.style.outlineOffset = "";
-    });
-    document.querySelector("[data-dot='ocean']").style.outlineOffset = "4px";
+    if (element) {
+      const color = element.getAttribute("data-color");
+      if (color === "navy") {
+        console.log("🚀 ~ setColorOcean11 ~ color:", color);
+      } else if (color === "mint") {
+        console.log("🚀 ~ setColorOcean11 ~ mint:", mint);
+      } else {
+        console.log("ocean");
+      }
+    }
   }
 
   function setColorNavy() {
@@ -88,17 +91,17 @@ export default function Home() {
             </div>
             <div className="flex flex-row justify-around items-center">
               <button
-                onClick={setColorNavy}
+                onClick={setColorDot}
                 className="bg-[#778090] p-2 m-1 cursor-pointer rounded-lg"
                 data-color="navy"
               ></button>
               <button
-                onClick={setColorMint}
+                onClick={setColorDot}
                 className="bg-[#8EDCD6] p-2 m-1 cursor-pointer rounded-lg"
                 data-color="mint"
               ></button>
               <button
-                onClick={setColorOcean11}
+                onClick={setColorDot}
                 className="bg-[#D9E7ED] p-2 m-1 cursor-pointer rounded-lg"
                 data-color="ocean"
               ></button>
